@@ -39,7 +39,7 @@ public class ChangeValues extends JFrame {
 		contentPane.add(okKey);
 		okKey.addActionListener(new ActionListener() {
 			
-			@Override
+	
 			public void actionPerformed(ActionEvent e) {
 				String res = insertValue.getText();
 				HR.setInsertVal(res);
