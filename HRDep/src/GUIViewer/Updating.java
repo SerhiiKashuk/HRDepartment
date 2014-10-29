@@ -1,4 +1,4 @@
-package resourse;
+package GUIViewer;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -13,6 +13,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import javax.swing.JLabel;
+
+import resourse.HR;
 
 public class Updating extends JFrame {
 

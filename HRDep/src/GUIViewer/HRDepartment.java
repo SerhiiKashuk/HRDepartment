@@ -1,4 +1,4 @@
-package resourse;
+package GUIViewer;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
@@ -10,6 +10,7 @@ import java.io.IOException;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JEditorPane;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JTable;
@@ -19,16 +20,23 @@ import javax.swing.JLabel;
 import javax.swing.JInternalFrame;
 import javax.swing.SwingConstants;
 
+import resourse.Employee;
+import resourse.HR;
+
 public class HRDepartment extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JPanel condition;
 	private JTextField year;
-	private JTextField idToFind;
 	private JTextField name;
 	private JTextField surname;
 	private boolean start = true;
 	private HR human;
+	
 
 
 	public HRDepartment() {
@@ -55,6 +63,8 @@ public class HRDepartment extends JFrame {
 		contentPane.add(year);
 		year.setColumns(10);
 		
+		
+		
 		JButton adding = new JButton("Add");
 		adding.setBounds(30, 244, 89, 23);
 		contentPane.add(adding);
@@ -66,7 +76,7 @@ public class HRDepartment extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent event) {
 				// TODO Auto-generated method stub
-				if(start){
+				
 					  human = HR.getHR();
 					String res = name.getText();
 				
@@ -75,14 +85,9 @@ public class HRDepartment extends JFrame {
 							Integer.valueOf(year.getText()));
 					human.saveEmployee(staffer);
 					
-				}
+				
 			}
 		});
-		
-		idToFind = new JTextField();
-		idToFind.setBounds(298, 87, 86, 20);
-		contentPane.add(idToFind);
-		idToFind.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("NAME");
 		lblNewLabel.setBounds(20, 28, 46, 14);
@@ -97,35 +102,32 @@ public class HRDepartment extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		JButton updat = new JButton("UPDATE");
-		updat.setBounds(176, 244, 89, 23);
+		updat.setBounds(30, 138, 89, 23);
 		contentPane.add(updat);
 		
 		JButton finding = new JButton("Find By ID");
-		finding.setBounds(246, 35, 89, 23);
+		finding.setBounds(30, 191, 89, 23);
 		contentPane.add(finding);
-		
-		JLabel lblNewLabel_3 = new JLabel("ID");
-		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_3.setBounds(227, 90, 46, 14);
-		contentPane.add(lblNewLabel_3);
 		
 		finding.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				try {
-					Employee st = HR.getEmployeeByid(Integer.valueOf(idToFind.getText()));
-					ViewerOfEmployees frame = new ViewerOfEmployees();
-					frame.setVisible(true);
-					frame.viewer.setText( st.getName() + st.getSurName() + st.getYear());
+				FindEmployee frame = new FindEmployee();
+				frame.setVisible(true);
+				/*try {
+					
+                 String record = Function.getRecordById
+                   (HR.storage, Integer.valueOf(idToFind.getText()), HR.getSeparator());
+				System.out.println(record);	
 				} catch (NumberFormatException | IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				
 				
-			}
-		});
+			}*/
+			}});
 		
 		updat.addActionListener(new ActionListener() {
 			
