@@ -3,31 +3,19 @@ package resourse;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Currency;
-import java.util.Scanner;
-
-
-
 
 public class HR {
 	private static HR recruter;
 	private static BufferedWriter bw;
 	public static File storage;
-	public static String separator ;
+	public static String separator;
 	private static String path;
 	private static String insertVal;
 	private BufferedReader br;
 	public static int numberID = 0;
-	
-	
-	
-	
-	
-	
 
 	public static void setInsertVal(String insertVal) {
 		HR.insertVal = insertVal;
@@ -36,17 +24,16 @@ public class HR {
 	public static String getInsertVal() {
 		return insertVal;
 	}
-	
-	
-	public static  String getSeparator(){
+
+	public static String getSeparator() {
 		return separator;
-		
+
 	};
 
 	private HR() {
 		HR.separator = ";";
-		path = "D://Study//Java//MyProjects//HRD//storage//employees.csv";
-		
+		path = "D://Study//Java//HRD//storage//employees.csv";
+
 		storage = new File(path);
 
 		try {
@@ -60,7 +47,6 @@ public class HR {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 
 	}
 
@@ -71,41 +57,35 @@ public class HR {
 		return recruter;
 	}
 
-	public  boolean saveEmployee(Employee emp) {
-		
+	public boolean saveEmployee(Employee emp) {
+
 		try {
 
 			if (storage.length() > 0) {
 				bw.newLine();
 			}
 			bw.write(
-				
-					(emp.getId() == -1 ? Function.getLastId(storage) + 1 
-							: emp.getId())
-				             
-					+ HR.separator
-					
-					+ emp.getName()
-					+ HR.separator
-					+ emp.getSurName()
-					+ HR.separator
-					+ emp.getYear());
+
+			(emp.getId() == -1 ? Function.getLastId(storage) + 1 : emp.getId())
+
+			+ HR.separator
+
+			+ emp.getName() + HR.separator + emp.getSurName() + HR.separator + emp.getSalary());
 
 			bw.flush();
 
 		} catch (IOException e) {
 			return false;
-		} 
+		}
 
 		return true;
 
 	}
 
-
 	public void updateData(int id, int position) throws IOException {
-		
+
 		StringBuffer sb = new StringBuffer();
-				String from = null;
+		String from = null;
 		String line = null;
 		BufferedReader br = new BufferedReader(new FileReader(storage));
 		String buf = "";
@@ -117,15 +97,13 @@ public class HR {
 
 		br.close();
 
-		from = Function.getRecordById(storage, id, separator);
+		from = Function.getRecordById(storage, id);
 
 		line = Function.getValueByPosition(from, position, separator);
-		
 
 		String values = HR.getInsertVal();
 
 		buf = sb.toString().replaceFirst(line, values);
-		System.out.println(buf);
 		BufferedWriter bwc = new BufferedWriter(new FileWriter(storage));
 		bwc.write(buf);
 		bwc.flush();
@@ -133,21 +111,14 @@ public class HR {
 
 	}
 
-		
-		
-
-	
 	public static Employee getEmployeeByid(int id) throws IOException {
 
 		Employee emp = null;
-		
 
-		String record = Function.getRecordById(storage, id, separator);
+		String record = Function.getRecordById(storage, id);
 
-		emp = new Employee(Function.getValueByPosition(record, 1, separator),
-			               Function.getValueByPosition(record, 2,
-			            	separator), Integer.valueOf(
-						   Function.getValueByPosition(record, 3, separator)));
+		emp = new Employee(Function.getValueByPosition(record, 1, separator), Function.getValueByPosition(record, 2,
+				separator), Double.valueOf(Function.getValueByPosition(record, 3, separator)));
 
 		return emp;
 
@@ -156,5 +127,5 @@ public class HR {
 	public File getStorage() {
 		return storage;
 	}
-	
+
 }
