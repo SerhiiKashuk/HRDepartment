@@ -7,16 +7,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
-
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.Cursor;
-import java.awt.Toolkit;
-
-import javax.swing.DebugGraphics;
-
 import java.awt.CardLayout;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
@@ -60,7 +54,7 @@ public class CardStaff extends JFrame {
 
 	
 	public CardStaff() {
-		setTitle("ВІДДІЛ КАДРІВ");
+		setTitle("Г‚ВІГ„Г„ВІГ‹ ГЉГЂГ„ГђВІГ‚");
 		setResizable(false);
 		
 		setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
@@ -155,62 +149,62 @@ public class CardStaff extends JFrame {
 		panelCard.add(textField_14);
 		textField_14.setColumns(10);
 		
-		JLabel idLabel = new JLabel("Таб. Номер");
+		JLabel idLabel = new JLabel("Г’Г ГЎ. ГЌГ®Г¬ГҐГ°");
 		idLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		idLabel.setBounds(50, 24, 146, 14);
 		panelCard.add(idLabel);
 		
-		JLabel surnameLabel = new JLabel("Призвіще");
+		JLabel surnameLabel = new JLabel("ГЏГ°ГЁГ§ГўВіГ№ГҐ");
 		surnameLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		surnameLabel.setBounds(50, 61, 69, 14);
 		panelCard.add(surnameLabel);
 		
-		JLabel nameLabel = new JLabel("Ім'я");
+		JLabel nameLabel = new JLabel("ВІГ¬'Гї");
 		nameLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		nameLabel.setBounds(50, 102, 46, 14);
 		panelCard.add(nameLabel);
 		
-		JLabel fatherNameLabel = new JLabel("Побатькові");
+		JLabel fatherNameLabel = new JLabel("ГЏГ®ГЎГ ГІГјГЄГ®ГўВі");
 		fatherNameLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		fatherNameLabel.setBounds(50, 148, 109, 14);
 		panelCard.add(fatherNameLabel);
 		
-		JLabel lblNewLabel_4 = new JLabel("Посада");
+		JLabel lblNewLabel_4 = new JLabel("ГЏГ®Г±Г Г¤Г ");
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblNewLabel_4.setBounds(50, 189, 46, 14);
 		panelCard.add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_5 = new JLabel("Структурний підрозділ");
+		JLabel lblNewLabel_5 = new JLabel("Г‘ГІГ°ГіГЄГІГіГ°Г­ГЁГ© ГЇВіГ¤Г°Г®Г§Г¤ВіГ«");
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblNewLabel_5.setBounds(50, 240, 167, 14);
 		panelCard.add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_6 = new JLabel("Телефон моб.");
+		JLabel lblNewLabel_6 = new JLabel("Г’ГҐГ«ГҐГґГ®Г­ Г¬Г®ГЎ.");
 		lblNewLabel_6.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblNewLabel_6.setBounds(277, 299, 109, 14);
 		panelCard.add(lblNewLabel_6);
 		
-		JLabel lblNewLabel_7 = new JLabel("Телефон дом.");
+		JLabel lblNewLabel_7 = new JLabel("Г’ГҐГ«ГҐГґГ®Г­ Г¤Г®Г¬.");
 		lblNewLabel_7.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblNewLabel_7.setBounds(50, 299, 109, 14);
 		panelCard.add(lblNewLabel_7);
 		
-		JLabel lblNewLabel_8 = new JLabel("ІНН");
+		JLabel lblNewLabel_8 = new JLabel("ВІГЌГЌ");
 		lblNewLabel_8.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblNewLabel_8.setBounds(50, 397, 46, 14);
 		panelCard.add(lblNewLabel_8);
 		
-		JLabel lblNewLabel_9 = new JLabel("Дата приняття на роботу");
+		JLabel lblNewLabel_9 = new JLabel("Г„Г ГІГ  ГЇГ°ГЁГ­ГїГІГІГї Г­Г  Г°Г®ГЎГ®ГІГі");
 		lblNewLabel_9.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblNewLabel_9.setBounds(408, 24, 208, 14);
 		panelCard.add(lblNewLabel_9);
 		
-		JLabel lblNewLabel_10 = new JLabel("Громадянство");
+		JLabel lblNewLabel_10 = new JLabel("ГѓГ°Г®Г¬Г Г¤ГїГ­Г±ГІГўГ®");
 		lblNewLabel_10.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblNewLabel_10.setBounds(50, 492, 126, 14);
 		panelCard.add(lblNewLabel_10);
 		
-		JLabel lblNewLabel_11 = new JLabel("Домашня адреса");
+		JLabel lblNewLabel_11 = new JLabel("Г„Г®Г¬Г ГёГ­Гї Г Г¤Г°ГҐГ±Г ");
 		lblNewLabel_11.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblNewLabel_11.setBounds(50, 349, 146, 14);
 		panelCard.add(lblNewLabel_11);
@@ -220,27 +214,27 @@ public class CardStaff extends JFrame {
 		lblNewLabel_12.setBounds(565, 299, 46, 14);
 		panelCard.add(lblNewLabel_12);
 		
-		JLabel lblNewLabel_13 = new JLabel("Дата народження");
+		JLabel lblNewLabel_13 = new JLabel("Г„Г ГІГ  Г­Г Г°Г®Г¤Г¦ГҐГ­Г­Гї");
 		lblNewLabel_13.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblNewLabel_13.setBounds(50, 444, 126, 14);
 		panelCard.add(lblNewLabel_13);
 		
-		JLabel lblNewLabel_14 = new JLabel("Сімейне положення");
+		JLabel lblNewLabel_14 = new JLabel("Г‘ВіГ¬ГҐГ©Г­ГҐ ГЇГ®Г«Г®Г¦ГҐГ­Г­Гї");
 		lblNewLabel_14.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblNewLabel_14.setBounds(50, 542, 167, 14);
 		panelCard.add(lblNewLabel_14);
 		
-		JRadioButton manNewRadioButton = new JRadioButton("Чол.");
+		JRadioButton manNewRadioButton = new JRadioButton("Г—Г®Г«.");
 		manNewRadioButton.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		manNewRadioButton.setBounds(678, 185, 63, 23);
 		panelCard.add(manNewRadioButton);
 		
-		JRadioButton womanRadioButton = new JRadioButton("Жін.");
+		JRadioButton womanRadioButton = new JRadioButton("Г†ВіГ­.");
 		womanRadioButton.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		womanRadioButton.setBounds(743, 184, 55, 23);
 		panelCard.add(womanRadioButton);
 		
-		JLabel sex = new JLabel("Стать");
+		JLabel sex = new JLabel("Г‘ГІГ ГІГј");
 		sex.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		sex.setBounds(685, 164, 234, 14);
 		panelCard.add(sex);
@@ -257,23 +251,23 @@ public class CardStaff extends JFrame {
 		panelDismiss.add(textField);
 		textField.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("Причина звільнення");
+		JLabel lblNewLabel = new JLabel("ГЏГ°ГЁГ·ГЁГ­Г  Г§ГўВіГ«ГјГ­ГҐГ­Г­Гї");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 13));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(80, 28, 213, 14);
 		panelDismiss.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Дата звільнення");
+		JLabel lblNewLabel_1 = new JLabel("Г„Г ГІГ  Г§ГўВіГ«ГјГ­ГҐГ­Г­Гї");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblNewLabel_1.setBounds(44, 104, 140, 14);
 		panelDismiss.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("Номер приказу");
+		JLabel lblNewLabel_2 = new JLabel("ГЌГ®Г¬ГҐГ° ГЇГ°ГЁГЄГ Г§Гі");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblNewLabel_2.setBounds(44, 139, 131, 14);
 		panelDismiss.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_3 = new JLabel("Дата приказу на звільнення");
+		JLabel lblNewLabel_3 = new JLabel("Г„Г ГІГ  ГЇГ°ГЁГЄГ Г§Гі Г­Г  Г§ГўВіГ«ГјГ­ГҐГ­Г­Гї");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 12));
 		lblNewLabel_3.setBounds(44, 175, 191, 14);
 		panelDismiss.add(lblNewLabel_3);
@@ -293,7 +287,7 @@ public class CardStaff extends JFrame {
 		panelDismiss.add(textField_3);
 		textField_3.setColumns(10);
 		
-		JButton dismissButton = new JButton("Звільнити");
+		JButton dismissButton = new JButton("Г‡ГўВіГ«ГјГ­ГЁГІГЁ");
 		dismissButton.setFont(new Font("Tahoma", Font.BOLD, 12));
 		dismissButton.setBounds(151, 220, 108, 23);
 		panelDismiss.add(dismissButton);
@@ -319,7 +313,7 @@ public class CardStaff extends JFrame {
 	    
 	    
 		
-		JButton card = new JButton("Загальні відомості");
+		JButton card = new JButton("Г‡Г ГЈГ Г«ГјГ­Ві ГўВіГ¤Г®Г¬Г®Г±ГІВі");
 		card.setFont(new Font("Tahoma", Font.BOLD, 12));
 		card.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -333,7 +327,7 @@ public class CardStaff extends JFrame {
 		
 		
 		
-		JButton work = new JButton("Трудова діяльність");
+		JButton work = new JButton("Г’Г°ГіГ¤Г®ГўГ  Г¤ВіГїГ«ГјГ­ВіГ±ГІГј");
 		work.setFont(new Font("Tahoma", Font.BOLD, 12));
 		work.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -347,7 +341,7 @@ public class CardStaff extends JFrame {
 		
 		
 		
-		JButton passport = new JButton("Паспортні дані");
+		JButton passport = new JButton("ГЏГ Г±ГЇГ®Г°ГІГ­Ві Г¤Г Г­Ві");
 		passport.setFont(new Font("Tahoma", Font.BOLD, 12));
 		passport.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -359,7 +353,7 @@ public class CardStaff extends JFrame {
 		passport.setBounds(502, 0, 250, 25);
 		contentPane.add(passport);
 		
-		JButton education = new JButton("Освіта");
+		JButton education = new JButton("ГЋГ±ГўВіГІГ ");
 		education.setFont(new Font("Tahoma", Font.BOLD, 12));
 		education.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -370,7 +364,7 @@ public class CardStaff extends JFrame {
 		education.setBounds(750, 0, 250, 25);
 		contentPane.add(education);
 		
-		JButton save = new JButton("Зберегти");
+		JButton save = new JButton("Г‡ГЎГҐГ°ГҐГЈГІГЁ");
 		save.setFont(new Font("Tahoma", Font.BOLD, 12));
 		save.setBounds(20, 634, 101, 23);
 		contentPane.add(save);
